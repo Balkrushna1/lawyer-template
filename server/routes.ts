@@ -1,18 +1,17 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
-import { storage } from "./storage";
 import { insertInquirySchema } from "@shared/schema";
 
 export async function registerRoutes(
   httpServer: Server,
   app: Express
 ): Promise<Server> {
-  // Mock API endpoint
+  // Contact form endpoint - no database, just validates and returns success
   app.post("/api/contact", async (req, res) => {
     try {
       const data = insertInquirySchema.parse(req.body);
-      await storage.createInquiry(data);
-      res.json({ success: true, message: "Message received" });
+      // Simply return success - no database storage
+      res.json({ success: true, message: "Thank you for your inquiry. We will contact you soon!" });
     } catch (e) {
       res.status(400).json({ error: "Invalid data" });
     }
