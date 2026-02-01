@@ -1,4 +1,4 @@
-// Vercel serverless function for API routes
+// Vercel serverless function for contact API
 const path = require('path');
 
 let app;
