@@ -6,6 +6,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isSheetOpen, setIsSheetOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,6 +29,7 @@ export function Navigation() {
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
+    setIsSheetOpen(false); // Close the mobile menu after navigation
   };
 
   return (
@@ -79,7 +81,7 @@ export function Navigation() {
 
         {/* Mobile Nav */}
         <div className="lg:hidden">
-          <Sheet>
+          <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" className={isScrolled ? "text-slate-900" : "text-slate-900 lg:text-white"}>
                 <Menu className="h-6 w-6" />
