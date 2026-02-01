@@ -1,0 +1,33 @@
+Build a **modern, stylish one-page React website** for a **Personal Injury Lawyer** that is optimized to convert visitors into clients. The site should be a **static standalone React app** (no backend or database) suitable for deployment on Vercel. It must be fully responsive and appeal to users in both the US and UK.
+
+**Features and Requirements:**
+
+- **Hero Section:** At the top of the page, include a hero banner with a compelling headline and subheadline for the law practice. For example: *“Experienced Personal Injury Lawyers Fighting for Maximum Compensation”* as the main headline, and a subheading like *“Over 20 years of experience – No fees unless we win your case.”* Include a prominent **“Schedule a Free Consultation”** CTA button in the hero, which stands out immediately (brightly colored and above the fold). Use a clean navigation bar at the top with links (Home, Services, Testimonials, FAQ, Contact) that scroll to each section. The nav bar should stick to top on scroll.
+
+- **About/Overview:** A section with a brief introduction of the lawyer/firm. Mention the lawyer’s credentials and what makes them stand out (e.g. “20+ years of experience, thousands of cases won” and a note like “Dedicated to fighting for justice for injury victims”). Keep this section concise and impactful, possibly using a couple of bullet points or icons to highlight key facts (like years of experience, recognition, etc.).
+
+- **Services (Practice Areas):** A section listing the primary legal services/practice areas offered (e.g. “Car Accident Injuries”, “Workplace Accidents”, “Medical Negligence”, “Slip and Fall Injuries”). For each practice area, include a short description (1-2 sentences) explaining how the firm can help with that type of case. You can present these in a responsive grid or list format with an icon or small image for each service for visual appeal.
+
+- **Testimonials:** A section with client testimonials to build trust. Include 2-3 short testimonials (quote text) from past clients, along with the client’s name (e.g., “John D.”) and maybe a descriptor like location or case type (e.g., “Car Accident Case”). Example testimonial: *“I had an excellent experience – they kept me informed and got a settlement beyond my expectations!”*. Format testimonials in quotation style, and consider using a slider or cards. This section should have a heading like “What Our Clients Say” and contribute to credibility.
+
+- **FAQ:** An interactive FAQ section with a few common questions and answers. Use a collapsible accordion style for each Q&A. For example:
+  - **“How much will it cost me to hire you?”** – Answer explaining the contingency fee or free consultation.
+  - **“Do I have a case?”** – Answer with a reassuring note that the lawyer can evaluate their situation in a consultation.
+  - **“How long will my case take?”** – Answer with general expectations.
+  Users should be able to click on a question to reveal the answer. This helps address potential client doubts directly on the page.
+
+- **Contact Section:** A contact form and contact info at the bottom of the page. The form should include fields: **Name, Email, Phone, and Message**, with a submit button. Since there’s no backend, the form submission will be a mock – when clicking submit, just display a JavaScript alert (or a visible confirmation message on the page) saying something like *“Thank you, your message has been received. We will contact you soon.”* Also display the lawyer’s phone number and email address for those who prefer to reach out directly, and possibly a mailing address if available. Encourage contact by phrasing like “**Get in touch for a free consultation**” near the form. Ensure the form and contact info are easy to find and use on both desktop and mobile.
+
+- **Footer:** At the very bottom, include a simple footer with the lawyer’s or firm’s name, copyright notice (e.g. “© 2026 Law Offices of John Doe”), and maybe links or social media icons if relevant. Keep it minimal and clean.
+
+**Technical notes:**
+
+- Use **React functional components** for structure (e.g., a `<Hero/>`, `<Services/>`, `<Testimonials/>`, `<FAQ/>`, `<Contact/>` components within the main App). The site should be contained in a single page (one React app view) with anchor links for navigation.
+- **Styling:** Implement a modern, professional design with CSS. Use a responsive layout (flexbox/grid and media queries) so that the site looks good on mobile phones and tablets as well as desktops. For colors, you can use a neutral palette (e.g., whites or light grays for background, dark text) with a contrasting accent color (e.g., navy blue or royal blue, or a color that implies trust and professionalism) for headings and buttons. Ensure the CTA buttons are styled to draw attention (e.g., a bright color, large font).
+- The navigation bar should collapse into a mobile-friendly menu on small screens (or at least remain usable on mobile). All text content should be legible on small devices (use adequate font sizes).
+- **Interactivity:** Implement the FAQ accordion functionality (e.g., using React state to show/hide answers). Validate the contact form fields (e.g., require name and email) on the client side. On submit, use a JavaScript `alert()` or a `<div>` to show a fake success message (since we are not actually sending data). The CTA button in the hero can be a link that scrolls to the contact form or opens the phone dialer on mobile (`tel:` link for the phone number).
+- Include helpful **comments in the code** to indicate the structure (for example, `// Navigation bar`, `// Hero Section`, etc.) and any important logic (such as handling the form submission or FAQ toggling). This will make the generated code easier to understand and modify.
+- Ensure the code is **well-organized and clean**: e.g., use multiple components as needed, and possibly a separate CSS file or styled-components for styling. Avoid any libraries that require a backend. You can use icon libraries or simple SVGs for icons if needed (for example, a phone icon or scales of justice icon).
+- The final deliverable should be a complete React project ready to run. 
+
+Provide the full source code for this React website (including `index.js`/`App.js`, component files, CSS, and any other necessary assets). The code should be ready to deploy on a static hosting (like Vercel) without further modification.
